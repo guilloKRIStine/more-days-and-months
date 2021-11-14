@@ -1,0 +1,55 @@
+#include "Header.h"
+#include "f.h"
+
+int main()
+{
+	char element;
+
+	char* old_massive = new char[26];
+	char* massive = new char[12];
+
+	int i = 0;
+	int j = 0;
+	
+	while (cin >> element)
+	{
+		if (element != '{' && element != '}' && element != '/' && element != ',' && element != ';')
+			j++;
+
+		if (element == '#') break;
+
+		old_massive[i] = element;
+
+		i++;
+	}
+	
+	if (j > 12)
+	{
+		cout << "STRING is WRONG";
+		abort();
+	}
+
+	int k = 0;
+	int g = 0;
+
+	while (k < i)
+	{
+		if (old_massive[k] != '{' && old_massive[k] != '}' && old_massive[k] != '/' && old_massive[k] != ',' && old_massive[k] != ';')
+		{
+			massive[g] = old_massive[k];
+			g++;
+		}
+
+		k++;
+	}
+
+	proverka_month1(massive);
+	proverka_month2(massive);
+
+	proverka_day1(massive); 
+	proverka_day2(massive);
+
+	cout << "STRING is RIGHT";
+
+	return 0;
+}
