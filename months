@@ -1,0 +1,24 @@
+#include "Header.h"
+#include "f.h"
+
+void proverka_month1(char* massive) //ïåðâàÿ öèôðà ìåñÿöà
+{
+	if (massive[0] > 1 || massive[6] < 0)
+		cout << "STRING is WRONG";
+	abort();
+}
+
+void proverka_month2(char* massive) // âòîðàÿ öèôðà ìåñÿöà
+{
+	if ((massive[0] == 1 && (massive[1] > 2 || massive[1] < 0)) || (massive[6] == 1 && (massive[7] > 2 || massive[7] < 0))) // íà 10-12 ìåñÿöû
+	{
+		cout << "STRING is WRONG";
+		abort();
+	}
+
+	if ((massive[0] == 0 && (massive[1] > 9 || massive[1] < 1)) || (massive[6] == 0 && (massive[7] > 9 || massive[7] < 1))) // íà 01-09 ìåñÿöû
+	{
+		cout << "STRING is WRONG";
+		abort();
+	}
+}
