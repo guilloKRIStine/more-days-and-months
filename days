@@ -1,0 +1,303 @@
+#include "Header.h"
+#include "f.h"
+
+void proverka_day1(char* massive) //ïåðâàÿ öèôðà äíÿ
+{
+	if (!(massive[0] == 0 && massive[1] == 2)) // íå ôåâðàëü ïåðâàÿ äàòà
+	{
+		if (massive[2] > 3 || massive[2] < 0)
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+	}
+
+	if (!(massive[6] == 0 && massive[7] == 2)) // íå ôåâðàëü âòîðàÿ äàòà
+	{
+		if (massive[8] > 3 || massive[9] < 0)
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+	}
+
+	if (massive[0] == 0 && massive[1] == 2) // ôåâðàëü ïåðâàÿ äàòà
+	{
+		if (massive[2] > 2 || massive[2] < 0)
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+	}
+
+	if (massive[6] == 0 && massive[7] == 2) // ôåâðàëü âòîðàÿ äàòà
+	{
+		if (massive[8] > 2 || massive[9] < 0)
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+	}
+}
+
+void proverka_day2(char* massive) // âòîðàÿ öèôðà äíÿ
+{
+	if (massive[0] == 1 && (massive[1] == 0 || massive[1] == 2)) // 10/12 ìåñÿö || ïåðâàÿ äàòà
+	{
+		if (massive[2] == 3 && (massive[3] > 1 || massive[3] < 0)) // 31 äåíü
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[2] == 2 &&  (massive[3] > 9 || massive[3] < 0)) // äíè 20-29
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[2] == 1 && (massive[3] > 9 || massive[3] < 0)) // äíè 10-19
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[2] == 0 && (massive[3] > 9 || massive[3] < 1)) // äíè 01-09
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+	}
+
+	if (massive[0] == 1 && massive[1] == 1) // 11 ìåñÿö || ïåðâàÿ äàòà
+	{
+		if (massive[2] == 3 && massive[3] != 0 ) // 30 äåíü
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[2] == 2 && (massive[3] > 9 || massive[3] < 0)) // äíè 20-29
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[2] == 1 && (massive[3] > 9 || massive[3] < 0)) // äíè 10-19
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[2] == 0 && (massive[3] > 9 || massive[3] < 1)) // äíè 01-09
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+	}
+
+	if (massive[0] == 0 && (massive[1] == 1 || massive[1] == 3 || massive[1] == 5 || massive[1] == 7 || massive[1] == 9)) // 01/03/05/07/09 || ïåðâàÿ äàòà
+	{
+		if (massive[2] == 3 && (massive[3] > 1 || massive[3] < 0)) // 31 äåíü
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[2] == 2 && (massive[3] > 9 || massive[3] < 0)) // äíè 20-29
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[2] == 1 && (massive[3] > 9 || massive[3] < 0)) // äíè 10-19
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[2] == 0 && (massive[3] > 9 || massive[3] < 1)) // äíè 01-09
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+	}
+
+	if (massive[0] == 0 && (massive[1] == 1 || massive[1] == 3 || massive[1] == 5 || massive[1] == 7 || massive[1] == 9)) // 04/06/08 || ïåðâàÿ äàòà
+	{
+		if (massive[2] == 3 && massive[3] != 0) // 30 äåíü
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[2] == 2 && (massive[3] > 9 || massive[3] < 0)) // äíè 20-29
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[2] == 1 && (massive[3] > 9 || massive[3] < 0)) // äíè 10-19
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[2] == 0 && (massive[3] > 9 || massive[3] < 1)) // äíè 01-09
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+	}
+
+	if (massive[0] == 0 && massive[1] == 2) // ôåâðàëü || ïåðâàÿ äàòà
+	{
+		if (massive[2] == 2 && (massive[3] > 8 || massive[3] < 0)) // äíè 20-28
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[2] == 1 && (massive[3] > 9 || massive[3] < 0)) // äíè 10-19
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[2] == 0 && (massive[3] > 9 || massive[3] < 1)) // äíè 01-09
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+	}
+
+
+	if (massive[6] == 1 && (massive[7] == 0 || massive[7] == 2)) // 10/12 ìåñÿö || âòîðàÿ äàòà
+	{
+		if (massive[8] == 3 && (massive[9] > 1 || massive[9] < 0)) // 31 äåíü
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[8] == 2 && (massive[9] > 9 || massive[9] < 0)) // äíè 20-29
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[8] == 1 && (massive[9] > 9 || massive[9] < 0)) // äíè 10-19
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[8] == 0 && (massive[9] > 9 || massive[9] < 1)) // äíè 01-09
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+	}
+
+	if (massive[6] == 1 && massive[7] == 1) // 11 ìåñÿö || âòîðàÿ äàòà
+	{
+		if (massive[8] == 3 && massive[9] != 0) // 30 äåíü
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[8] == 2 && (massive[9] > 9 || massive[9] < 0)) // äíè 20-29
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[8] == 1 && (massive[9] > 9 || massive[9] < 0)) // äíè 10-19
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[8] == 0 && (massive[9] > 9 || massive[9] < 1)) // äíè 01-09
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+	}
+
+	if (massive[6] == 0 && (massive[7] == 1 || massive[7] == 3 || massive[7] == 5 || massive[7] == 7 || massive[7] == 9)) // 01/03/05/07/09 || ïåðâàÿ äàòà
+	{
+		if (massive[8] == 3 && (massive[9] > 1 || massive[9] < 0)) // 31 äåíü
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[8] == 2 && (massive[9] > 9 || massive[9] < 0)) // äíè 20-29
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[8] == 1 && (massive[9] > 9 || massive[9] < 0)) // äíè 10-19
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[8] == 0 && (massive[9] > 9 || massive[9] < 1)) // äíè 01-09
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+	}
+
+	if (massive[6] == 0 && (massive[7] == 1 || massive[7] == 3 || massive[7] == 5 || massive[7] == 7 || massive[7] == 9)) // 04/06/08 || âòîðàÿ äàòà
+	{
+		if (massive[8] == 3 && massive[9] != 0) // 30 äåíü
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[8] == 2 && (massive[9] > 9 || massive[9] < 0)) // äíè 20-29
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[8] == 1 && (massive[9] > 9 || massive[9] < 0)) // äíè 10-19
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[8] == 0 && (massive[9] > 9 || massive[9] < 1)) // äíè 01-09
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+	}
+
+	if (massive[6] == 0 && massive[7] == 2) // ôåâðàëü || âòîðàÿ äàòà
+	{
+		if (massive[8] == 2 && (massive[9] > 8 || massive[9] < 0)) // äíè 20-29
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[8] == 1 && (massive[9] > 9 || massive[9] < 0)) // äíè 10-19
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+
+		if (massive[8] == 0 && (massive[9] > 9 || massive[9] < 1)) // äíè 01-09
+		{
+			cout << "STRING is WRONG";
+			abort();
+		}
+	}
+}
